@@ -111,18 +111,22 @@ class ParsedText extends React.Component {
       const { style: parentStyle } = this.props;
       const { style, CellRender, ...remainder } = props;
 
-      const Wrapper = CellRender(props)
+      const Wrapper = CellRender?.(props);
 
-      return (
+      const render =  <Text
+        key={`parsedText-${index}`}
+        style={[parentStyle, style]}
+        {...this.props.childrenProps}
+        {...remainder}
+      />
+
+      if (Wrapper) return (
         <Wrapper>
-          <Text
-            key={`parsedText-${index}`}
-            style={[parentStyle, style]}
-            {...this.props.childrenProps}
-            {...remainder}
-          />
+          {render}
         </Wrapper>
-      );
+      )
+
+      return render;
     });
   }
 

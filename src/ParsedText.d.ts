@@ -11,6 +11,7 @@ declare module 'react-native-parsed-text' {
     renderText?: (matchingString: string, matches: string[]) => string;
     onPress?: (text: string, index: number) => void;
     onLongPress?: (text: string, index: number) => void;
+    CellRender?: (props: TextProps) => Element
   }
 
   /**

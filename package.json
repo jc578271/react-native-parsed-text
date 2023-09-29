@@ -28,7 +28,8 @@
   ],
   "peerDependencies": {
     "react": "*",
-    "react-native": "*"
+    "react-native": "*",
+    "react-native-gesture-handler": "^2.13.1"
   },
   "devDependencies": {
     "@babel/core": "7.10.x",
@@ -41,7 +42,8 @@
     "prettier": "2.0.x",
     "react": "16.13.x",
     "react-native": "0.62.x",
-    "react-test-renderer": "16.13.x"
+    "react-test-renderer": "16.13.x",
+    "react-native-gesture-handler": "^2.13.1"
   },
   "author": "jrichardlai",
   "license": "MIT",
